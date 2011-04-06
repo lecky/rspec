@@ -189,7 +189,7 @@ module Spec
           begin ;\
             replace_output = @output_stream.equal?($stdout) ;\
             require 'rubygems' unless ENV['NO_RUBYGEMS'] ;\
-            require 'Win32/Console/ANSI' ;\
+            #require 'Win32/Console/ANSI' ;\
             @output_stream = $stdout if replace_output ;\
           rescue LoadError ;\
             warn "You must 'gem install win32console' to use colour on Windows" ;\

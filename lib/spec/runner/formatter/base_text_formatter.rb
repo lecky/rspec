@@ -122,7 +122,8 @@ module Spec
         def output_to_tty?
           begin
             @output.tty?
-          rescue NoMethodError
+            true
+	  rescue NoMethodError
             false
           end
         end
